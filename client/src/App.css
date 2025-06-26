@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  padding: 2rem;
+  color: white;
+}
+
+.Event-form input {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  width: 200px;
+}
+
+.Event-form button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.Event-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Event-list li {
+  background: #61dafb;
+  color: black;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
