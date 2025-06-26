@@ -6,6 +6,8 @@ import {
   Container, Typography, Box, TextField, Button, List, ListItem, CircularProgress, Snackbar, Alert
 } from '@mui/material';
 
+const API_BASE = 'https://fullstack-bwft.onrender.com/api/events';
+
 function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [events, setEvents] = useState([]);
@@ -18,7 +20,7 @@ function App() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch(`/api/events/date/${date.toISOString().split('T')[0]}`);
+      const res = await fetch(`${API_BASE}/date/${date.toISOString().split('T')[0]}`);
       const data = await res.json();
       setEvents(data);
     } catch (err) {
@@ -45,7 +47,7 @@ function App() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/events', {
+      const res = await fetch(API_BASE, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
